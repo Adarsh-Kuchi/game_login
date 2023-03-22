@@ -9,17 +9,50 @@ html , body{
 body{
   background: #141923;
   color: white;
+  --active-bg-border : linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
 
-  button{
-    background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+  --active-border: 2px solid transparent;
+  --disbaled-bg: #3a3a3a;
+
+  button  {
+    background: var(--active-bg-border);
     border-radius: 50em;
-    border: 2px solid transparent;
+    padding: 0.25em;
+    margin-top: 1em;
+    border: var(--active-border);
     color: #fff;
     min-width: 100px;
   }
   button:disabled {
-    background: #3a3a3a;
+    background: var(--disbaled-bg);
     color: #9e9e9e;
+    border-radius: 50em;
+    margin-top: 1em;
+    padding: 0.25em;
+    min-width: 100px;
     border: 1.6px solid #b0b0b0;
  }
+ .form-control{
+    color: white !important;
+    background: var(--active-bg-border);
+ }
+ .form-control:focus{
+  border: none;
+  box-shadow: none;
+ }
+ .form-control::placeholder{
+ color: white;
+ }
+ form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 , label{
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
 }

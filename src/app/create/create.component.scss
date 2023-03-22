@@ -1,9 +1,35 @@
-.container{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+
+input , .form-control:focus{
+  border-radius: 10px;
+  background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+  border: 2px solid transparent;
 }
-input{
-  border: var(--button-background);
+
+
+.head{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  .image-div{
+    width: 125px;
+    height: 125px;
+    background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border: 2px solid;
+    border-image-source: linear-gradient(180deg, #7B72CC 0%, #DC0078 51.04%, #0D93E0 100%);
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+}
+form{
+  gap: 2em;
+  margin-top: 2em;
 }

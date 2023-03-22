@@ -1,9 +1,8 @@
-.container{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+
+
+input , .form-control:focus{
+  border-radius: 10px;
+  background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+  border: 2px solid transparent;
 }
-input{
-  border: var(--button-background);
-}
+

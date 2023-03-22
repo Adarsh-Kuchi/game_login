@@ -1,6 +1,13 @@
-<button [ngClass]="currentComponent === 'first'? 'hide' : 'show '"  (click)="onBackButtonClick()">Back</button>
-<app-first-name *ngIf="currentComponent === 'first'" (submitted)="onFirstComponentSubmit($event)"></app-first-name>
-<app-icons *ngIf="currentComponent === 'icons'" [name]="listComponentName" (submitted)="onListComponentSubmit($event)"></app-icons>
-<app-both *ngIf="currentComponent === 'both'" [data]="bothComponentData" (joinClicked)="onBothComponentJoin()" (createClicked)="onBothComponentCreate()"></app-both>
-<app-join *ngIf="currentComponent === 'join'"></app-join>
-<app-create *ngIf="currentComponent === 'create'"></app-create>
+<div class="container">
+  <div class="row">
+
+      <span class="material-symbols-outlined" [ngClass]="currentComponent === 'first'? 'hide' : 'show '"  (click)="onBackButtonClick()">
+      arrow_back
+      </span>
+    <app-first-name *ngIf="currentComponent === 'first'" (submitted)="onFirstComponentSubmit($event)"></app-first-name>
+    <app-icons *ngIf="currentComponent === 'icons'" [name]="listComponentName" (submitted)="onListComponentSubmit($event)"></app-icons>
+    <app-both *ngIf="currentComponent === 'both'" [data]="bothComponentData" (joinClicked)="onBothComponentJoin()" (createClicked)="onBothComponentCreate()"></app-both>
+    <app-join *ngIf="currentComponent === 'join'" [data]="joinComponentData"></app-join>
+    <app-create *ngIf="currentComponent === 'create'" [data]="createComponentData"></app-create>
+  </div>
+</div>

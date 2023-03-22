@@ -1,6 +1,42 @@
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  background-image: url('../assets/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (max-width:600px) {
+    background-image: url('../assets/mobile-bg.svg');
+    width: 90%;
+
+  }
+}
+
+.row{
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
 .hide{
   display: none;
 }
 .show{
   display: block;
 }
+.material-symbols-outlined{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 32px;
+  font-weight: bold;
+  width: 40px;
+  @media screen and (max-width:600px) {
+    top: 0.5em;
+    left: 0.5em;
+  }
+
+}
+

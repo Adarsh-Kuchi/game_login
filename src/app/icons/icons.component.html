@@ -1,14 +1,9 @@
 
-<div class="container">
-  <div class="row">
-
-    <p>hai {{name}}</p>
+    <h1>Hello {{name}}!</h1>
+    <h4>Choose your Avatar</h4>
     <div class="image-div">
-      <div class="image" *ngFor="let item of images ; let i =index" (click)="onImageClick(i) " [ngClass]="(selectedImageIndex === i) ? 'red-border' : (selectedImageIndex === -1)? 'red-border':'grey-border' " >
+      <button class="image" *ngFor="let item of images ; let i =index" (click)="onImageClick(i) " [ngClass]="(selectedImageIndex === i) ? 'red-border' : (selectedImageIndex === -1)? 'red-border':'grey-border' " >
         <img [src]="item">
-       </div>
+       </button>
     </div>
-    <button type="submit" [disabled]="selectedImageIndex === -1" (click)="onClick()" >submit</button>
-  </div>
-
-</div>
+    <button class="submit" type="submit" [disabled]="selectedImageIndex === -1" (click)="onClick()" >submit</button>

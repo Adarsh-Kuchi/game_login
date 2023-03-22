@@ -1,0 +1,35 @@
+input , .form-control:focus{
+  border-radius: 10px;
+  background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+  border: 2px solid transparent;
+}
+
+.head{
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  .image-div{
+    width: 125px;
+    height: 125px;
+    background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border: 2px solid;
+    border-image-source: linear-gradient(180deg, #7B72CC 0%, #DC0078 51.04%, #0D93E0 100%);
+    img{
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+}
+/* Remove up and down arrows on number input fields */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

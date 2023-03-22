@@ -1,8 +1,14 @@
-<div class="container">
-  <div class="row">
-    <p>hai {{data.name}}</p>
-    <img [src]="'assets/image' + (data.imageIndex + 1) + '.png'">
-    <button type="button"  (click)="createClicked.emit()"> create</button>
-    <button type="button"  (click)="joinClicked.emit()"> join</button>
-  </div>
+
+<div class="main">
+  <div class="head">
+    <div class="image-div">
+      <img [src]="'assets/image' + (data.imageIndex + 1) + '.svg'">
+    </div>
+    <h1>hai {{data.name}}</h1>
+   </div>
+    <div class="buttons">
+      <button type="button"  (click)="createClicked.emit()"> Create a Room</button>
+      <button type="button"  (click)="joinClicked.emit()"> Join a Room</button>
+    </div>
 </div>
+

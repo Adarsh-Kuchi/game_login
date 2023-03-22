@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-first-name',
@@ -14,18 +15,11 @@ export class FirstNameComponent implements OnInit {
   formSubmitted = false;
   @Output() submitted = new EventEmitter<string>();
 
-  constructor( private fb:FormBuilder) { }
+  constructor( private fb:FormBuilder , private service:DataService) { }
 
   ngOnInit(): void {
     this.createForm();
-    this.myInputRef.nativeElement.addEventListener('keypress', (event: KeyboardEvent) => {
-      const key = event.key;
-      const allowedChars = /[a-zA-Z\s]/;
-
-      if (!allowedChars.test(key)) {
-        event.preventDefault();
-      }
-    });
+    this.service.validateInput(this.myInputRef)
   }
   createForm(){
     this.inputForm = this.fb.group(

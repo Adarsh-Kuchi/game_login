@@ -10,6 +10,7 @@ import { JoinComponent } from './join/join.component';
 import { CreateComponent } from './create/create.component';
 import { BothComponent } from './both/both.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,7 @@ import { BothComponent } from './both/both.component';
     IconsComponent,
     JoinComponent,
     CreateComponent,
-    BothComponent
+    BothComponent,
   ],
   imports: [
     BrowserModule,

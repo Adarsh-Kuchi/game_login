@@ -10,6 +10,8 @@ export class AppComponent {
   listComponentName = '';
   listComponentImageIndex = -1;
   bothComponentData = { name: '', imageIndex: -1 };
+  createComponentData = { name: '', imageIndex: -1 }
+  joinComponentData = { name: '', imageIndex: -1 }
 
   onFirstComponentSubmit(name: string) {
     this.listComponentName = name;
@@ -21,14 +23,21 @@ export class AppComponent {
     this.listComponentImageIndex = imageIndex;
     this.currentComponent = 'both';
     this.bothComponentData = { name: this.listComponentName, imageIndex: this.listComponentImageIndex };
+    this.joinComponentData = { name: this.listComponentName, imageIndex: this.listComponentImageIndex }
+    this.createComponentData = { name: this.listComponentName, imageIndex: this.listComponentImageIndex }
+
   }
 
   onBothComponentJoin() {
     this.currentComponent = 'join';
+
+
   }
 
   onBothComponentCreate() {
     this.currentComponent = 'create';
+
+
   }
   onJoinComponentBack() {
     this.currentComponent = 'both';
@@ -41,7 +50,7 @@ export class AppComponent {
   onBackButtonClick() {
     if (this.currentComponent === 'icons') {
        console.log('Back button clicked');
-      this.currentComponent = '';
+      this.currentComponent = 'first';
       console.log('Back button clicked');
     } else if (this.currentComponent === 'both') {
       this.currentComponent = 'icons';

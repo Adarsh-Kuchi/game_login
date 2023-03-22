@@ -1,12 +1,14 @@
-
-<div class="container">
-  <div class="row">
+<div class="head">
+  <div class="image-div">
+    <img [src]="'assets/image' + (data.imageIndex + 1) + '.svg'">
+  </div>
+  <h1>hai {{data.name}}</h1>
+ </div>
     <form [formGroup]= "inputForm" (ngSubmit)="onClick()">
      <div>
       <label class="form-label"> Room code</label>
       <input type="number" formControlName="name" (input)="onInput($event)" class="form-control"  placeholder="-Type-here">
      </div>
-     <button type="submit"  [disabled]="inputForm.invalid && check" >join</button>
+     <button type="submit"  [disabled]="inputForm.invalid" >join</button>
     </form>
-  </div>
-</div>
+

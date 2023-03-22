@@ -1,5 +1,4 @@
-<div class="container" *ngIf="!formSubmitted">
-  <div class="row" >
+
     <form [formGroup]= "inputForm" (ngSubmit)="onClick()" >
      <div>
       <label class="form-label"> What is your Name</label>
@@ -7,8 +6,5 @@
      </div>
      <button type="submit"  [disabled]= "inputForm.invalid">Submit</button>
     </form>
-
-  </div>
-</div>
 
 

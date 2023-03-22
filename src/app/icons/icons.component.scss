@@ -1,34 +1,45 @@
-.container{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-input{
-  border: var(--button-background);
-}
 
 .image-div{
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1em;
 }
 .image{
-  width: 100px;
-  height: 100px;
-  background: white;
+  width: 125px;
+  height: 125px;
+  border: 5px transparent;
+  background: linear-gradient(#141923,#141923) padding-box,linear-gradient(to right,#7b72cc,#dc0078,#3871d6) border-box;
   border-radius: 50%;
   display: flex;
   justify-content: space-around;
-
-
+  align-items: flex-end;
+  @media screen and (max-width:600px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+button.image:hover , button.image:focus{
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.submit{
+  max-width: 150px;
 }
 img{
-  width: 75px;
+  width: 100px;
+  height: 100px;
+  @media screen and (max-width:600px) {
+    width: 75px;
+    height: 75px;
+  }
 }
 .red-border{
-  border: 5px solid red;
+  border: 2px solid;
+  border-image-source: linear-gradient(180deg, #7B72CC 0%, #DC0078 51.04%, #0D93E0 100%);
 }
 .grey-border{
-  border: 5px solid grey;
+  background: #3A3A3A;
+  border: 2px solid #B0B0B0;
 }

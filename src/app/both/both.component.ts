@@ -17,11 +17,6 @@ export class BothComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  create(){
-    this.router.navigateByUrl('create')
-  }
-  join(){
-    this.router.navigateByUrl('join')
-  }
+
 
 }

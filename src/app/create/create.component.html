@@ -1,16 +1,20 @@
 
-<div class="container">
-  <div class="row">
+<div class="head">
+  <div class="image-div">
+    <img [src]="'assets/image' + (data.imageIndex + 1) + '.svg'">
+  </div>
+  <h1>hai {{data.name}}</h1>
+ </div>
     <form [formGroup]= "inputForm" (ngSubmit)="onClick()">
      <div>
-      <label class="form-label"> Room name</label>
-      <input type="text" min="000000" max="999999" formControlName="name" class="form-control"  placeholder="-Type-here">
+      <label class="form-label">Room name</label>
+      <input type="text"   #myInputRef  formControlName="name" class="form-control"  placeholder="Room name">
      </div>
      <div>
-      <label class="form-label"> Room code</label>
-      <input type="number" min="0" max="5" formControlName="name" class="form-control"  placeholder="-Type-here">
+      <label class="form-label">No of players</label>
+      <input type="text"  #inputElement  formControlName="player" class="form-control"  placeholder="No of players">
      </div>
-     <button type="submit" [disabled]="inputForm.invalid" >join</button>
+
+     <button type="submit" [disabled]="inputForm.invalid" >Create</button>
     </form>
-  </div>
-</div>
+

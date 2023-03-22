@@ -11,10 +11,11 @@ export class IconsComponent implements OnInit {
   @Output() submitted = new EventEmitter<number>();
 
   images = [
-    'assets/image1.png',
-    'assets/image2.png',
-    'assets/image3.png',
-    'assets/image4.png'
+    'assets/image1.svg',
+    'assets/image2.svg',
+    'assets/image3.svg',
+    'assets/image4.svg',
+    'assets/image5.svg'
   ]
 
   constructor() { }
@@ -33,6 +34,7 @@ export class IconsComponent implements OnInit {
   onClick(){
     if(this.selectedImageIndex != -1){
       this.submitted.emit(this.selectedImageIndex);
+      
 
     }
 
