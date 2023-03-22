@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row">
+
+    <p>hai {{name}}</p>
+    <div class="image-div">
+      <div class="image" *ngFor="let item of images ; let i =index" (click)="onImageClick(i) " [ngClass]="(selectedImageIndex === i) ? 'red-border' : (selectedImageIndex === -1)? 'red-border':'grey-border' " >
+        <img [src]="item">
+       </div>
+    </div>
+    <button type="submit" [disabled]="selectedImageIndex === -1" (click)="onClick()" >submit</button>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="row">
+    <form [formGroup]= "inputForm" (ngSubmit)="onClick()">
+     <div>
+      <label class="form-label"> Room code</label>
+      <input type="number" formControlName="name" (input)="onInput($event)" class="form-control"  placeholder="-Type-here">
+     </div>
+     <button type="submit"  [disabled]="inputForm.invalid && check" >join</button>
+    </form>
+  </div>
+</div>
